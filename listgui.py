@@ -39,6 +39,22 @@ class save:
         print(self.name,self.address,self.mobile_no,self.room_no,self.price)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import sys
 
 try:

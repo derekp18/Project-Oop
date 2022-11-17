@@ -25,6 +25,7 @@ except ImportError:
     py3 = True
 details_list=[]
 
+
 def file_save():
     NAME_PRO = details_list[0]
     ADDRESS_PRO = details_list[1]
@@ -72,6 +73,7 @@ class save:
         self.mobile_no=MOBILE_NO_PRO
         self.room_no=ROOM_NO_PRO
         self.price=PRICE_PRO
+
 
 
 class HOTEL_MANGMENT_checkin:
@@ -216,6 +218,8 @@ class HOTEL_MANGMENT_checkin:
 
 
             file_save()
+
+
 
         def submit_clicked():
             if self.var1.get()==1 and self.var2.get()==0 and self.var3.get()==0 and self.var4.get()==0 and self.var5.get()==1 and self.var6.get()==0:

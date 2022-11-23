@@ -90,3 +90,4 @@ class recipt:
 if __name__ == '__main__':
     recipt1=recipt()
 
+

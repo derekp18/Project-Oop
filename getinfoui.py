@@ -73,13 +73,13 @@ class HOTEL_MANAGEMENT:
                     print (a)
                     if self.gettininfo == a:
                         n = 1
-                        print("NAME-", "\t", "\t", s.name)
-                        print("\n")
-                        print("ADDRESS-", "\t", s.address)
-                        print("\n")
-                        print("MOBILE NO.-", "  ", s.mobile_no)
-                        print("\n")
-                        print("HIS TOTAL BILL IS Rs.", s.price)
+                        self.Text1.insert(INSERT,"NAME-", "\t", "\t", s.name)
+                        self.Text1.insert(INSERT,"\n")
+                        self.Text1.insert(INSERT,"ADDRESS-", "\t", s.address)
+                        self.Text1.insert(INSERT,"\n")
+                        self.Text1.insert(INSERT, "MOBILE NO.-", "  ", s.mobile_no)
+                        self.Text1.insert(INSERT,"\n")
+                        self.Text1.insert(INSERT,"HIS TOTAL BILL IS Rs.", s.price)
                     elif EOFError:
                         if n == 0:
                             print("NO GUEST IN ROOM ", self.gettininfo)

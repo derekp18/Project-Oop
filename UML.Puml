@@ -1,0 +1,111 @@
+@startuml
+class Hotel {
+  name: String
+ addLocation():bool
+}
+
+Hotel "1" *-- "*" Room
+
+class Room{
+RoomNumber: String
+style: RoomStyle
+status: RoomStatus
+bookingPrice: double
+isSmoking: bool
+--
+isRoomAvailable(): bool
+checkin(): bool
+checkOut(): bool
+}
+
+
+
+class Person{
+name: string
+address: Address
+email sting
+phone: sting
+accountType: AccountType
+}
+
+class Guest{
+totalRoomsCheckedin: int
+createBooking(): bool
+}
+
+Guest --|> Person: Extends
+
+
+Class RoomBooking{
+reservationNumber: string
+startDate: date
+durationinDays: int
+status: BookingStatus
+checkin: datetime
+checkout: datetime
+--
+fetchDetails():RoomBooking
+}
+RoomBooking "1" --> "*" Guest: makes
+
+Class Invoiceltem{
+amount:double
+--
+updateAmounte():bool
+}
+
+RoomBooking "1"-- "1" Invoiceltem
+
+Class Invoice{
+amount:double
+--
+createBill():bool
+}
+
+Invoiceltem "*"--* "1"Invoice
+
+Class BillTransaction{
+creationDate: date
+amount: double
+status: PaymentStatus
+--
+initiateTransaction(): bool
+}
+BillTransaction "1"--*"1" Invoice
+
+
+Class CreditCardTransaction{
+nmaeOnCard:string
+zipCode: string
+}
+
+Class CheckTransaction{
+bankName:string
+checkNmber:string
+}
+
+Class CashTransaction{
+cashTendered:doble
+}
+
+CreditCardTransaction --|> BillTransaction: extends
+CheckTransaction--|> BillTransaction: extends
+CashTransaction--|> BillTransaction: extends
+
+class RoomCharge{
+issuedAt: date
+--
+addinvoicelment(): bool
+}
+
+RoomCharge "1"--> "0..1" Invoiceltem: has
+
+interface    Search{
+Search(RoomStyle, StartDate, Duration)
+}
+
+
+Room ..|> Search
+Guest ..> Search
+
+@enduml

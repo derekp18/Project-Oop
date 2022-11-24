@@ -142,9 +142,9 @@ class save:
     def bill(self):
         print("\n")
         print("@@@@@@@@@  5 STAR HOTEL AND RESORTS  @@@@@@@@@@@@@@@@")
-        print("@@@@@@@@@@@@ HAUS KHAZ,  NEW DELHI @@@@@@@@@@@@@@@@@@")
+        print("@@@@@@@@@@@@ Barranquilla, Atlantico @@@@@@@@@@@@@@@@@@")
         print("@@@@@@@@@@ SERVING    GUEST   SINCE @@@@@@@@@@@@@@@@@")
-        print("@@@@@@@@@@@@@@@    ###1950###       @@@@@@@@@@@@@@@@@")
+        print("@@@@@@@@@@@@@@@    ###2022###       @@@@@@@@@@@@@@@@@")
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         print("NAME-", self.name)
         print("\n")

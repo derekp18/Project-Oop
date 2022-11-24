@@ -71,7 +71,7 @@ class HOTEL_MANAGEMENT:
         self.Message6.configure(foreground="#000000")
         self.Message6.configure(highlightbackground="#d9d9d9")
         self.Message6.configure(highlightcolor="black")
-        self.Message6.configure(text='''WELCOME''')
+        self.Message6.configure(text='''Welcome to Gates of heaven''')
         self.Message6.configure(width=791)
 
         self.Button2 = Button(self.Frame1)
